@@ -1,16 +1,22 @@
+---
+bibliography: Templates/citation.bib
+csl: Templates/elsevier-vancouver.csl
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  bookdown::pdf_document2:
+    includes:
+      in_header: Templates/preamble.tex
+    keep_tex: yes
+    number_sections: yes
+    toc: yes
+    toc_depth: 4
+  html_document: default
+---
 
 `r if(!exists('TITLE')){TITLE = 'test'}`
 
 ---
 title: `r TITLE`
-output:
-  pdf_document: 
-    keep_tex: yes
-    toc: true
-    number_sections: yes
-  html_document: default
-bibliography: citation.bib
-csl: elsevier-vancouver.csl
 ---
 
 
