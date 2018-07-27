@@ -1,6 +1,6 @@
 ---
-bibliography: Templates/citation.bib
-csl: Templates/elsevier-vancouver.csl
+#bibliography: Templates/citation.bib
+#csl: Templates/elsevier-vancouver.csl
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   bookdown::pdf_document2:
