@@ -2,7 +2,7 @@ Require many dependencies. Please make sure you can run
 
 
 ```R
-rmarkdown::render('header.Rmd')
+Rscript -e "rmarkdown::render('header.Rmd')"
 ```
 
 or 
