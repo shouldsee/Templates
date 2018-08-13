@@ -5,7 +5,7 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   bookdown::pdf_document2:
     includes:
-      in_header: Templates/preamble.tex
+      #in_header: Templates/preamble.tex
     keep_tex: yes
     number_sections: yes
     toc: yes

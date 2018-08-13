@@ -13,6 +13,7 @@
     \usepackage{fontspec}
   \fi
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -23,6 +24,7 @@
 }{}
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \hypersetup{unicode=true,
             pdftitle={test},
             pdfborder={0 0 0},
@@ -38,25 +40,12 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
 
 %%% Use protect on footnotes to avoid problems with footnotes in titles
 \let\rmarkdownfootnote\footnote%
@@ -73,29 +62,27 @@
 }
 
 \setlength{\droptitle}{-2em}
-  \title{test}
-  \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-  \author{}
-  \preauthor{}\postauthor{}
-  \predate{\centering\large\emph}
-  \postdate{\par}
-  \date{18 March, 2018}
 
-\usepackage{bbm} 
-\newcommand{\D}{\text{d}}
-\newcommand{\indicator}{\mathbbm{1}}
-\newcommand{\hamm}{d_h}
-\newcommand{\symhamm}{d_{sh}}
-\newcommand{\hz}{\text{Hz}}
-\newcommand{\tr}{\text{tr}}
-\newcommand{\Iext}{{I_e/A}}
-\newcommand\gvn[1][]{\:#1\vert\:}
-\usepackage{afterpage}
-\usepackage{fancyvrb}
-\usepackage{longtable}
-\usepackage{booktabs} 
-\usepackage{placeins}
+  \title{test}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{}
+    \preauthor{}\postauthor{}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{27 July, 2018}
+
+
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
 
 \begin{document}
 \maketitle
@@ -104,7 +91,6 @@
 \setcounter{tocdepth}{4}
 \tableofcontents
 }
-
 
 
 \end{document}
